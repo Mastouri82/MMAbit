@@ -229,7 +229,6 @@
         border-radius: var(--radius);
         box-shadow: var(--shadow);
         background: linear-gradient(45deg, #4361ee, #7209b7);
-        aspect-ratio: 1/1;
         display: flex;
         align-items: center;
         justify-content: center;
