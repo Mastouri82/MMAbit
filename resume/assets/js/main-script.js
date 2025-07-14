@@ -62,14 +62,21 @@ animateElements.forEach((element) => {
 });
 
 // Animate skill bars on page load if they're already in view
-document.addEventListener("DOMContentLoaded", function () {
+function checkBars() {
   document.querySelectorAll(".skill-progress").forEach((bar) => {
-    if (bar.getBoundingClientRect().top < window.innerHeight) {
+    if (
+      bar.getBoundingClientRect().top < window.innerHeight &&
+      !bar.classList.contains("animated")
+    ) {
       const width = bar.getAttribute("data-width");
       bar.style.width = width + "%";
+      bar.classList.add("animated"); // تا دوباره اجرا نشود
     }
   });
-});
+}
+document.addEventListener("DOMContentLoaded", checkBars);
+window.addEventListener("scroll", checkBars);
+
 
 
 
