@@ -100,11 +100,14 @@ const flipCard = document.getElementById("myFlipCard");
 
 const swiper = new Swiper(".swiper", {
   spaceBetween: 30,
-
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
   lazy: {
     loadPrevNext: true,
   },
- 
+
   breakpoints: {
     640: {
       slidesPerView: 1,
@@ -114,7 +117,7 @@ const swiper = new Swiper(".swiper", {
       slidesPerView: 3,
       spaceBetween: 30,
     },
- 
+
   },
 
   navigation: {
