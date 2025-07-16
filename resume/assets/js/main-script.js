@@ -129,5 +129,5 @@ swiper.el.addEventListener('click', () => {
   swiper.autoplay.stop();
   setTimeout(() => {
     swiper.autoplay.start();
-  }, 1000);
+  }, 10000);
 });
