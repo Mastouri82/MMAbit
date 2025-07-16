@@ -1,6 +1,7 @@
 body {
   font-family: "Vazir", sans-serif !important;
 }
+
 :root {
   --primary: #4361ee;
   --primary-dark: #3a56d4;
@@ -115,11 +116,9 @@ nav a:hover::after {
   width: 800px;
   height: 800px;
   border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(67, 97, 238, 0.15) 0%,
-    rgba(255, 255, 255, 0) 70%
-  );
+  background: radial-gradient(circle,
+      rgba(67, 97, 238, 0.15) 0%,
+      rgba(255, 255, 255, 0) 70%);
   z-index: -1;
   animation: pulse 8s infinite alternate;
 }
@@ -234,12 +233,10 @@ nav a:hover::after {
   position: absolute;
   width: 200%;
   height: 200%;
-  background: conic-gradient(
-    transparent,
-    transparent,
-    transparent,
-    var(--primary)
-  );
+  background: conic-gradient(transparent,
+      transparent,
+      transparent,
+      var(--primary));
   animation: rotate 4s linear infinite;
 }
 
@@ -289,18 +286,41 @@ section {
 }
 
 /* About Section */
-.info{
+.info {
   background-color: black;
-  background-image: url(../image/mmd.jpg);
+
   background-size: 100% 100%;
   background-repeat: no-repeat;
   height: 400px;
 
 }
-.reil{
+
+.reil {
   background-color: #2e2e2e5b;
-  color: #e4edf5;
+  color: #e0e1e1;
+  transform: translateY(87%);
+  transition: all 0.3s ease-in-out;
 }
+
+.info:hover .reil {
+  transform: translateY(0%);
+}
+
+.mmd {
+  background-image: url(../image/mmd.jpg);
+}
+
+.ali {
+  background-image: url(../image/ali.jpg);
+  background-size: cover;
+  background-position-x: center;
+}
+.matin{
+  background-image: url(../image/matin.JPG);
+  background-size: cover;
+  background-position-x: center;
+}
+
 /* Skills Section */
 .skills-container {
   display: grid;
@@ -612,6 +632,7 @@ footer {
     opacity: 0;
     transform: translateY(40px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -622,9 +643,11 @@ footer {
   0% {
     transform: translateY(0px);
   }
+
   50% {
     transform: translateY(-20px);
   }
+
   100% {
     transform: translateY(0px);
   }
@@ -635,6 +658,7 @@ footer {
     transform: scale(0.9);
     opacity: 0.7;
   }
+
   100% {
     transform: scale(1.1);
     opacity: 0.4;
@@ -645,6 +669,7 @@ footer {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -686,6 +711,7 @@ footer {
     padding-right: 20px;
     left: 0 !important;
   }
+
   .timeline-item:nth-child(even) {
     right: auto;
   }
