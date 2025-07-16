@@ -60,8 +60,6 @@ const observer = new IntersectionObserver(
 animateElements.forEach((element) => {
   observer.observe(element);
 });
-
-// Animate skill bars on page load if they're already in view
 function checkBars() {
   document.querySelectorAll(".skill-progress").forEach((bar) => {
     if (
@@ -74,6 +72,7 @@ function checkBars() {
     }
   });
 }
+
 document.addEventListener("DOMContentLoaded", checkBars);
 window.addEventListener("scroll", checkBars);
 
@@ -97,3 +96,67 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     }
   });
 });
+const flipCard = document.getElementById("myFlipCard");
+
+
+let mySwiper = null; // نگهداری instance سوییپر
+
+function initSwiperIfNeeded() {
+  const windowWidth = window.innerWidth;
+  const breakpoint = 768; // هر چی خواستی بگذار
+
+  if (windowWidth <= breakpoint) {
+    // اگر هنوز سوییپر ساخته نشده
+    if (!mySwiper) {
+      mySwiper = new Swiper('.swiper', {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        // تنظیمات دلخواه
+      });
+      console.log('Swiper فعال شد');
+    }
+  } else {
+    // اگر عرض زیاد شد و سوییپر فعاله، destroy کن
+    if (mySwiper) {
+      mySwiper.destroy(true, true);
+      mySwiper = null;
+      console.log('Swiper غیرفعال شد');
+    }
+  }
+}
+
+// بار اول اجرا
+initSwiperIfNeeded();
+
+// هر وقت تغییر سایز شد
+window.addEventListener('resize', initSwiperIfNeeded);
+
+const swiper = new Swiper(".swiper", {
+  spaceBetween: 30,
+
+  lazy: {
+    loadPrevNext: true,
+  },
+ 
+  breakpoints: {
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+ 
+  },
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+

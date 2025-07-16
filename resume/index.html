@@ -19,7 +19,12 @@
       integrity="sha384-Xbg45MqvDIk1e563NLpGEulpX6AvL404DP+/iCgW9eFa2BqztiwTexswJo2jLMue"
       crossorigin="anonymous"
     />
-   <link rel="stylesheet" href="./assets/css/main-style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="./assets/css/main-style.css" />
   </head>
   <body>
     <!-- Header -->
@@ -59,15 +64,16 @@
             <p>
               تیمی جوان و پرتلاش در مسیر یادگیری و توسعه مهارت‌های الکترونیک و
               سیستم‌های نهفته فعال در زمینه شبیه‌سازی و تحلیل با MATLAB، و در
-              حال گسترش توانمندی‌ها در طراحی با آلتیوم و میکروکنترلر با رویکردی
-              دقیق، علمی و پرانرژی برای تبدیل دانش به تجربه واقعی
+              حال گسترش توانمندی‌ها در طراحی با Altium Designer و Microcontroler
+              با رویکردی دقیق، علمی و پرانرژی برای تبدیل دانش به تجربه واقعی
             </p>
             <div class="hero-btns">
               <a href="#contact" class="btn btn-primary">
-                <i class="fas fa-paper-plane"></i> Hire Me
+                <i class="fas fa-paper-plane"></i> تماس با ما
               </a>
               <a href="#experience" class="btn btn-outline">
-                <i class="fas fa-briefcase"></i>
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                تاریخچه ما
               </a>
             </div>
           </div>
@@ -84,54 +90,40 @@
     <section class="about" id="about">
       <div class="container">
         <div class="section-header animate-on-scroll">
-          <h2>About Me</h2>
-          <p>
-            Get to know more about my background, experience, and what drives me
-          </p>
+          <h2>درباره ما</h2>
         </div>
-        <div class="about-content">
-          <div class="about-text animate-on-scroll">
-            <h3>Who I Am</h3>
-            <p>
-              I'm a passionate web developer with over 5 years of experience
-              creating modern, responsive websites and applications. I
-              specialize in frontend development with a focus on creating
-              intuitive user experiences.
-            </p>
-            <p>
-              My approach combines technical expertise with creative design
-              thinking to deliver solutions that not only function flawlessly
-              but also delight users.
-            </p>
-            <p>
-              When I'm not coding, you can find me exploring new design trends,
-              contributing to open-source projects, or hiking in the mountains.
-            </p>
+        <div class="about-content swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="mmd w-100 info rounded-3">
+                <div class="h-100 reil">
 
-            <div class="about-stats">
-              <div class="stat-box animate-on-scroll">
-                <i class="fas fa-briefcase"></i>
-                <div class="number">5+</div>
-                <div>Years Experience</div>
-              </div>
-              <div class="stat-box animate-on-scroll">
-                <i class="fas fa-project-diagram"></i>
-                <div class="number">120+</div>
-                <div>Projects Completed</div>
-              </div>
-              <div class="stat-box animate-on-scroll">
-                <i class="fas fa-users"></i>
-                <div class="number">85+</div>
-                <div>Happy Clients</div>
-              </div>
-              <div class="stat-box animate-on-scroll">
-                <i class="fas fa-award"></i>
-                <div class="number">12</div>
-                <div>Awards Won</div>
+                  
+                    <h4>محمدرضا مسطوری</h4>
+                    <p>
+                      محمدرضا مسطوری دانشجوی برق – گرایش کنترل | مدیر نشریه
+                      انجمن علمی برق محمدرضا از بچه‌های خلاق و خوش‌ذوق رشته برقه
+                      که دوران دبیرستان رو در شهدای کارگر گذرونده و الان دانشجوی
+                      گرایش کنترل در دانشگاه شاهده. از همون اوایل، عاشق دنیای
+                      برنامه‌نویسی بوده و همیشه دنبال یاد گرفتن چیزای جدیده.
+                      حالا هم به‌عنوان مدیر نشریه انجمن علمی برق، سعی می‌کنه
+                      مطالب فنی رو با یه چاشنی جذاب و قابل‌فهم برای بچه‌ها منتشر
+                      کنه. هم اهل تحلیل و کد زدنه، هم اهل ساختن فضایی که علم،
+                      خلاقیت و ارتباطات توش کنار هم باشن.
+                    </p>
+                 
+                </div>
               </div>
             </div>
+            <div class="swiper-slide">
+              <div class="mmd w-100 info rounded-3">1</div>
+            </div>
+            <div class="swiper-slide">
+              <div class="mmd w-100 info rounded-3">1</div>
+            </div>
           </div>
-          <div class="about-image animate-on-scroll">aks</div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
       </div>
     </section>
@@ -371,19 +363,20 @@
             </div>
           </div>
 
-        
-            <div class="map-container animate-on-scroll" style="width: 100%; height: 300px">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3246.0916503123617!2d51.34476077580523!3d35.5514386370929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f91f8a7a78f3531%3A0xed98e34c8c508e32!2sShahed%20University!5e0!3m2!1sen!2s!4v1752510282763!5m2!1sen!2s"
-                width="100%"
-                height="100%"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-       
+          <div
+            class="map-container animate-on-scroll"
+            style="width: 100%; height: 300px"
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3246.0916503123617!2d51.34476077580523!3d35.5514386370929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f91f8a7a78f3531%3A0xed98e34c8c508e32!2sShahed%20University!5e0!3m2!1sen!2s!4v1752510282763!5m2!1sen!2s"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
       </div>
     </section>
@@ -480,6 +473,7 @@
       integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./assets/js/main-script.js"></script>
   </body>
 </html>
