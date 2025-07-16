@@ -102,7 +102,7 @@ const swiper = new Swiper(".swiper", {
   spaceBetween: 30,
   autoplay: {
     delay: 2500,
-    disableOnInteraction: true,
+    disableOnInteraction: false,
   },
   lazy: {
     loadPrevNext: true,
@@ -125,4 +125,9 @@ const swiper = new Swiper(".swiper", {
     prevEl: ".swiper-button-prev",
   },
 });
-
+swiper.el.addEventListener('click', () => {
+  swiper.autoplay.stop();
+  setTimeout(() => {
+    swiper.autoplay.start();
+  }, 1000);
+});
