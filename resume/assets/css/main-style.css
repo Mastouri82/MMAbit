@@ -590,8 +590,8 @@ footer {
   content: "";
   position: absolute;
   bottom: -10px;
-  left: 0;
-  width: 50px;
+  right: 0;
+  width: 150px;
   height: 3px;
   background: var(--primary);
   border-radius: 10px;
