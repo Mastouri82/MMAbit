@@ -102,7 +102,7 @@ const swiper = new Swiper(".swiper", {
   spaceBetween: 30,
   autoplay: {
     delay: 2500,
-    disableOnInteraction: false,
+    disableOnInteraction: true,
   },
   lazy: {
     loadPrevNext: true,
