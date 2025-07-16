@@ -292,14 +292,14 @@ section {
 
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  height: 400px;
+  height: 470px;
 
 }
 
 .reil {
   background-color: #2e2e2e83;
   color: #e0e1e1;
-  transform: translateY(87%);
+  transform: translateY(89%);
   transition: all 0.3s ease-in-out;
 }
 
